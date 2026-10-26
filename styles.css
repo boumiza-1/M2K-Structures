@@ -19,3 +19,23 @@
 @keyframes riseIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 
 .site-credit{color:#9eabb4;font-size:9px;letter-spacing:.06em}.site-credit a{color:#8ed8ff;font-weight:800;letter-spacing:.12em;margin-left:5px;text-decoration:none;border-bottom:1px solid rgba(142,216,255,.55);padding-bottom:2px;transition:color .2s,border-color .2s}.site-credit a:hover{color:#fff;border-color:#fff}.footer-bottom{align-items:center;flex-wrap:wrap}
+
+/* Refined contrast, portfolio cards and stronger motion */
+:root{--orange:#79d2ff;--blue:#79d2ff}
+.contact-phone{color:#fff!important;font-size:clamp(28px,4vw,42px);font-weight:800;text-shadow:0 2px 20px rgba(0,0,0,.6);display:inline-flex;align-items:center;gap:18px;border:1px solid rgba(121,210,255,.55);background:rgba(7,20,31,.8);padding:15px 22px;border-radius:8px;letter-spacing:.02em}
+.contact-phone span{color:#79d2ff!important}
+.contact-phone:hover{color:#79d2ff!important;transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.22)}
+.site-credit{color:#9eabb4;font-size:10px}.site-credit a{color:#79d2ff;font-weight:800;letter-spacing:.12em;margin-left:6px;border-bottom:1px solid #79d2ff;padding-bottom:3px}
+.projects{background:#f3f2ed;color:#0b1724}.portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.portfolio-grid .project-card{min-height:0;background:#fff;color:#0b1724;border-radius:12px;overflow:hidden;box-shadow:0 10px 35px rgba(11,23,36,.07);transition:transform .35s ease,box-shadow .35s ease}.portfolio-grid .project-card:hover{transform:translateY(-7px);box-shadow:0 22px 48px rgba(11,23,36,.14)}
+.project-visual{height:190px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:20px;background:linear-gradient(135deg,#0c1b29,#254b65);color:#fff}
+.project-visual:before,.project-visual:after{content:"";position:absolute;inset:20% 12%;border:1px solid rgba(121,210,255,.7);transform:skewY(-12deg);transition:transform .7s ease,opacity .7s ease}
+.project-visual:after{inset:32% 24%;border-color:rgba(255,255,255,.45);transform:skewY(15deg)}
+.project-card:hover .project-visual:before{transform:skewY(-4deg) scale(1.08)}.project-card:hover .project-visual:after{transform:skewY(4deg) scale(1.1)}
+.project-visual span,.project-visual b{position:relative;z-index:1}.project-visual span{position:absolute;top:15px;left:18px;color:#79d2ff;font-size:11px;letter-spacing:.14em}.project-visual b{font-size:12px;letter-spacing:.15em}
+.visual-spiral{background:linear-gradient(135deg,#122536,#496a7b)}.visual-spiral:before{border-radius:50%;transform:rotate(-25deg) scaleX(.55)}.visual-solar,.visual-ground{background:linear-gradient(135deg,#19425b,#76a9c3)}.visual-office{background:linear-gradient(135deg,#1b2b39,#536d7e)}.visual-pergola,.visual-poly{background:linear-gradient(135deg,#243d4d,#8ba6b0)}.visual-carport,.visual-entry,.visual-awning,.visual-lights{background:linear-gradient(135deg,#162d40,#617f91)}.visual-pool{background:linear-gradient(135deg,#17465c,#56a6c5)}.visual-grille{background:linear-gradient(135deg,#273c4b,#8a9aa2)}.visual-hyundai{background:linear-gradient(135deg,#0c1b29,#496779)}
+.portfolio-grid .project-overlay{position:relative;padding:22px 23px 25px;background:#fff;color:#0b1724}.portfolio-grid .project-overlay h3{font-size:18px;line-height:1.45;letter-spacing:-.025em;margin:0 0 10px;color:#102131}.portfolio-grid .project-overlay p{font-size:13px;line-height:1.8;color:#5f6e79;margin:0}.portfolio-grid .project-overlay:before{content:"";display:block;width:34px;height:3px;background:#79d2ff;margin-bottom:15px}
+.reveal{opacity:0;transform:translateY(28px) scale(.99);transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1)}.reveal.visible{opacity:1;transform:translateY(0) scale(1)}
+@media(prefers-reduced-motion:no-preference){.hero-copy .eyebrow{animation:heroEntry .7s .08s both}.hero-copy h1{animation:heroEntry .85s .18s both}.hero-copy .hero-text{animation:heroEntry .85s .3s both}.hero-copy .hero-buttons{animation:heroEntry .85s .4s both}.hero-stamp{animation:heroEntry 1s .5s both}}
+@keyframes heroEntry{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:650px){.portfolio-grid{grid-template-columns:1fr}.project-visual{height:165px}.portfolio-grid .project-overlay{padding:19px}.portfolio-grid .project-overlay h3{font-size:16px}.portfolio-grid .project-overlay p{font-size:12px}.contact-phone{font-size:25px;padding:12px 14px}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
