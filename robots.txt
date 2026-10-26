@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://m2k-structures.com/sitemap.xml
