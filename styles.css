@@ -92,3 +92,29 @@ body.lightbox-active{overflow:hidden;}
 @keyframes lightboxIn{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:scale(1)}}
 @media(max-width:640px){.photo-lightbox{padding:70px 12px 60px;gap:6px}.lightbox-figure{max-width:calc(100vw - 92px)}.lightbox-figure img{max-height:calc(100svh - 170px);border-radius:7px}.lightbox-nav{width:34px;flex-basis:34px;height:44px;font-size:30px;border-radius:9px}.lightbox-close{top:13px;right:13px;width:42px;height:42px}.lightbox-hint{font-size:10px;bottom:12px}}
 @media(prefers-reduced-motion:reduce){.photo-lightbox,.lightbox-figure img,.lightbox-close,.lightbox-nav{transition:none;animation:none}}
+
+/* Quote request section */
+.quote-section{background:#eaf0f3;color:#0b1724;position:relative;overflow:hidden}
+.quote-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(35px,7vw,100px);align-items:start}
+.quote-intro{position:sticky;top:35px}
+.eyebrow.dark{color:#536777}
+.quote-intro h2{font:800 clamp(38px,5vw,64px)/1.06 var(--font);letter-spacing:-.06em;margin:20px 0}
+.quote-intro h2 em{font-style:normal;color:#287ba0}
+.quote-intro>p:not(.eyebrow){color:#586b78;line-height:1.9;font-size:14px;max-width:420px}
+.quote-points{display:grid;gap:14px;margin-top:36px;padding-top:24px;border-top:1px solid #cbd7de;color:#344b5b;font-size:12px;font-weight:700;letter-spacing:.02em}
+.quote-form{background:#fff;color:#0b1724;padding:clamp(24px,4vw,42px);border-radius:16px;box-shadow:0 22px 65px rgba(13,38,54,.09);border:1px solid rgba(24,75,101,.08)}
+.form-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding-bottom:22px;margin-bottom:24px;border-bottom:1px solid #e4ebef}
+.form-heading>span{font:800 13px var(--font);letter-spacing:.1em}
+.form-heading small{color:#71818b;font-size:10px;text-align:right}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:19px}
+.form-grid label{display:flex;flex-direction:column;gap:8px;font-size:12px;font-weight:700;color:#263c4b}
+.form-grid input,.form-grid select,.form-grid textarea{width:100%;min-width:0;border:1px solid #d7e1e7;border-radius:8px;background:#f9fbfc;padding:13px 14px;font:400 13px var(--body);color:#142b3b;outline:none;transition:border-color .2s,box-shadow .2s,background .2s}
+.form-grid input:focus,.form-grid select:focus,.form-grid textarea:focus{border-color:#287ba0;box-shadow:0 0 0 3px rgba(40,123,160,.12);background:#fff}
+.form-grid textarea{resize:vertical;min-height:115px}
+.form-full{grid-column:1/-1}
+.quote-submit{width:100%;justify-content:space-between;border:0;margin-top:22px;cursor:pointer}
+.form-note{font-size:11px;line-height:1.7;color:#6d7e88;margin:14px 0 0}
+.form-status{font-size:12px;color:#287ba0;margin:8px 0 0}
+.facebook-link,.footer-social a[href*="facebook"]{color:#79d2ff}
+@media(max-width:800px){.quote-layout{grid-template-columns:1fr;gap:32px}.quote-intro{position:static}.quote-intro h2{max-width:540px}.quote-points{grid-template-columns:1fr 1fr;gap:12px}.quote-form{padding:25px}}
+@media(max-width:520px){.form-grid{grid-template-columns:1fr;gap:16px}.form-full{grid-column:auto}.form-heading{flex-direction:column}.form-heading small{text-align:left}.quote-points{grid-template-columns:1fr}.quote-submit{font-size:11px}}
